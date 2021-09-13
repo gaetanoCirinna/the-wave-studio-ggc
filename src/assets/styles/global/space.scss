@@ -1,0 +1,406 @@
+$space: (
+  "auto": auto,
+  "0": 0,
+  "1": 8px,
+  "2": 16px,
+  "3": 24px,
+  "4": 32px,
+  "5": 40px,
+  "6": 48px,
+  "7": 56px,
+  "8": 64px,
+  "9": 72px,
+  "10": 80px,
+  "11": 88px,
+  "12": 96px,
+  "13": 104px,
+  "14": 112px,
+  "15": 120px,
+  "16": 128px,
+  "17": 136px,
+  "18": 144px,
+  "19": 152px,
+  "20": 160px
+);
+
+@each $key, $value in $space {
+  .p {
+    &-#{$key} {
+      padding: $value;
+    }
+    &-sm-#{$key} {
+      @include sm {
+        padding: $value !important;
+      }
+    }
+    &-md-#{$key} {
+      @include md {
+        padding: $value !important;
+      }
+    }
+    &-lg-#{$key} {
+      @include lg {
+        padding: $value !important;
+      }
+    }
+    &-xl-#{$key} {
+      @include lg {
+        padding: $value !important;
+      }
+    }
+
+    &l {
+      &-#{$key} {
+        padding-left: $value;
+      }
+      &-sm-#{$key} {
+        @include sm {
+          padding-left: $value !important;
+        }
+      }
+      &-md-#{$key} {
+        @include md {
+          padding-left: $value !important;
+        }
+      }
+      &-lg-#{$key} {
+        @include lg {
+          padding-left: $value !important;
+        }
+      }
+      &-xl-#{$key} {
+        @include xl {
+          padding-left: $value !important;
+        }
+      }
+    }
+    &r {
+      &-#{$key} {
+        padding-right: $value;
+      }
+      &-sm-#{$key} {
+        @include sm {
+          padding-right: $value !important;
+        }
+      }
+      &-md-#{$key} {
+        @include md {
+          padding-right: $value !important;
+        }
+      }
+      &-lg-#{$key} {
+        @include lg {
+          padding-right: $value !important;
+        }
+      }
+      &-xl-#{$key} {
+        @include xl {
+          padding-right: $value !important;
+        }
+      }
+    }
+    &t {
+      &-#{$key} {
+        padding-top: $value;
+      }
+      &-sm-#{$key} {
+        @include sm {
+          padding-top: $value !important;
+        }
+      }
+      &-md-#{$key} {
+        @include md {
+          padding-top: $value !important;
+        }
+      }
+      &-lg-#{$key} {
+        @include lg {
+          padding-top: $value !important;
+        }
+      }
+      &-xl-#{$key} {
+        @include xl {
+          padding-top: $value !important;
+        }
+      }
+    }
+    &b {
+      &-#{$key} {
+        padding-bottom: $value;
+      }
+      &-sm-#{$key} {
+        @include sm {
+          padding-bottom: $value !important;
+        }
+      }
+      &-md-#{$key} {
+        @include md {
+          padding-bottom: $value !important;
+        }
+      }
+      &-lg-#{$key} {
+        @include lg {
+          padding-bottom: $value !important;
+        }
+      }
+      &-xl-#{$key} {
+        @include xl {
+          padding-bottom: $value !important;
+        }
+      }
+    }
+    &x {
+      &-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+      }
+      &-sm-#{$key} {
+        @include sm {
+          padding-left: $value !important;
+          padding-right: $value !important;
+        }
+      }
+      &-md-#{$key} {
+        @include md {
+          padding-left: $value !important;
+          padding-right: $value !important;
+        }
+      }
+      &-lg-#{$key} {
+        @include lg {
+          padding-left: $value !important;
+          padding-right: $value !important;
+        }
+      }
+      &-xl-#{$key} {
+        @include xl {
+          padding-left: $value !important;
+          padding-right: $value !important;
+        }
+      }
+    }
+    &y {
+      &-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+      }
+      &-sm-#{$key} {
+        @include sm {
+          padding-top: $value !important;
+          padding-bottom: $value !important;
+        }
+      }
+      &-md-#{$key} {
+        @include md {
+          padding-top: $value !important;
+          padding-bottom: $value !important;
+        }
+      }
+      &-lg-#{$key} {
+        @include lg {
+          padding-top: $value !important;
+          padding-bottom: $value !important;
+        }
+      }
+      &-xl-#{$key} {
+        @include xl {
+          padding-top: $value !important;
+          padding-bottom: $value !important;
+        }
+      }
+    }
+  }
+}
+
+@each $key, $value in $space {
+    .m {
+        &-#{$key} {
+            margin: $value;
+        }
+        &-sm-#{$key} {
+            @include sm {
+                margin: $value !important;
+            }
+        }
+        &-md-#{$key} {
+            @include md {
+                margin: $value !important;
+            }
+        }
+        &-lg-#{$key} {
+            @include lg {
+                margin: $value !important;
+            }
+        }
+        &-xl-#{$key} {
+            @include lg {
+                margin: $value !important;
+            }
+        }
+
+        &l {
+            &-#{$key} {
+                margin-left: $value;
+            }
+            &-sm-#{$key} {
+                @include sm {
+                    margin-left: $value !important;
+                }
+            }
+            &-md-#{$key} {
+                @include md {
+                    margin-left: $value !important;
+                }
+            }
+            &-lg-#{$key} {
+                @include lg {
+                    margin-left: $value !important;
+                }
+            }
+            &-xl-#{$key} {
+                @include xl {
+                    margin-left: $value !important;
+                }
+            }
+        }
+        &r {
+            &-#{$key} {
+                margin-right: $value;
+            }
+            &-sm-#{$key} {
+                @include sm {
+                    margin-right: $value !important;
+                }
+            }
+            &-md-#{$key} {
+                @include md {
+                    margin-right: $value !important;
+                }
+            }
+            &-lg-#{$key} {
+                @include lg {
+                    margin-right: $value !important;
+                }
+            }
+            &-xl-#{$key} {
+                @include xl {
+                    margin-right: $value !important;
+                }
+            }
+        }
+        &t {
+            &-#{$key} {
+                margin-top: $value;
+            }
+            &-sm-#{$key} {
+                @include sm {
+                    margin-top: $value !important;
+                }
+            }
+            &-md-#{$key} {
+                @include md {
+                    margin-top: $value !important;
+                }
+            }
+            &-lg-#{$key} {
+                @include lg {
+                    margin-top: $value !important;
+                }
+            }
+            &-xl-#{$key} {
+                @include xl {
+                    margin-top: $value !important;
+                }
+            }
+        }
+        &b {
+            &-#{$key} {
+                margin-bottom: $value;
+            }
+            &-sm-#{$key} {
+                @include sm {
+                    margin-bottom: $value !important;
+                }
+            }
+            &-md-#{$key} {
+                @include md {
+                    margin-bottom: $value !important;
+                }
+            }
+            &-lg-#{$key} {
+                @include lg {
+                    margin-bottom: $value !important;
+                }
+            }
+            &-xl-#{$key} {
+                @include xl {
+                    margin-bottom: $value !important;
+                }
+            }
+        }
+        &x {
+            &-#{$key} {
+                margin-left: $value;
+                margin-right: $value;
+            }
+            &-sm-#{$key} {
+                @include sm {
+                    margin-left: $value !important;
+                    margin-right: $value !important;
+                }
+            }
+            &-md-#{$key} {
+                @include md {
+                    margin-left: $value !important;
+                    margin-right: $value !important;
+                }
+            }
+            &-lg-#{$key} {
+                @include lg {
+                    margin-left: $value !important;
+                    margin-right: $value !important;
+                }
+            }
+            &-xl-#{$key} {
+                @include xl {
+                    margin-left: $value !important;
+                    margin-right: $value !important;
+                }
+            }
+            &-auto {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        &y {
+            &-#{$key} {
+                margin-top: $value;
+                margin-bottom: $value;
+            }
+            &-sm-#{$key} {
+                @include sm {
+                    margin-top: $value !important;
+                    margin-bottom: $value !important;
+                }
+            }
+            &-md-#{$key} {
+                @include md {
+                    margin-top: $value !important;
+                    margin-bottom: $value !important;
+                }
+            }
+            &-lg-#{$key} {
+                @include lg {
+                    margin-top: $value !important;
+                    margin-bottom: $value !important;
+                }
+            }
+            &-xl-#{$key} {
+                @include xl {
+                    margin-top: $value !important;
+                    margin-bottom: $value !important;
+                }
+            }
+        }
+    }
+}

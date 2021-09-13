@@ -1,0 +1,53 @@
+[
+    {
+        "name": "ARISTON",
+        "description": "Matis condens - Condensing Boiler 24 kW Methane - Indoor",
+        "discountPrice": "1500,00",
+        "realPrice": "1350,02",
+        "info": "Sopralluogo e installazione inclusi",
+        "review": "4",
+        "promo": "Risparmi il 20%"
+    },
+    {
+        "name": "ARISTON",
+        "description": "Matis condens - Condensing Boiler 24 kW Methane - Indoor",
+        "realPrice": "1350,02",
+        "info": "Sopralluogo e installazione inclusi",
+        "review": "4"
+    },
+    {
+        "name": "ARISTON",
+        "description": "Matis condens - Condensing Boiler 24 kW Methane - Indoor",
+        "realPrice": "1350,02",
+        "info": "Sopralluogo e installazione inclusi",
+        "review": "4"
+    },
+    {
+        "promo": "Risparmi il 20%",
+        "name": "ARISTON",
+        "description": "Matis condens - Condensing Boiler 24 kW Methane - Indoor",
+        "discountPrice": "1500,00",
+        "realPrice": "1350,02",
+        "info": "Sopralluogo e installazione inclusi",
+        "review": "4"
+    },
+    {
+        "promo": "Risparmi il 20%",
+        "name": "ARISTON",
+        "description": "Matis condens - Condensing Boiler 24 kW Methane - Indoor",
+        "discountPrice": "1500,00",
+        "realPrice": "1350,02",
+        "info": "Sopralluogo e installazione inclusi",
+        "review": "4"
+    },
+    {
+        "promo": "Risparmi il 20%",
+        "name": "ARISTON",
+        "description": "Matis condens - Condensing Boiler 24 kW Methane - Indoor",
+        "discountPrice": "1500,00",
+        "realPrice": "1350,02",
+        "info": "Sopralluogo e installazione inclusi",
+        "review": "4"
+    }
+    
+]

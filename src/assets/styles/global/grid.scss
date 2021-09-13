@@ -1,0 +1,117 @@
+@use "sass:math";
+
+$paddingMobile: 12px;
+$paddingDesktop: 8px;
+
+$grid__bp-sm: 576;
+$grid__bp-md: 768;
+$grid__bp-lg: 1024;
+$grid__bp-xl: 1200;
+$grid__bp-xxl: 1540;
+
+
+$grid__cols: 12;
+
+$map-grid-props: (
+  "": 0,
+  "-sm": $grid__bp-sm,
+  "-md": $grid__bp-md,
+  "-lg": $grid__bp-lg,
+  "-xl": $grid__bp-xl,
+  "-xxl": $grid__bp-xxl,
+);
+
+@mixin create-mq($breakpoint, $min-or-max) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
+      @content;
+    }
+  }
+}
+
+// Standard cols systems 24
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint, "min") {
+    .col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+    // 12 cols
+    @for $i from 1 through $grid-cols {
+      .col#{$modifier}-#{$i} {
+        flex-basis:  100/($grid-cols/$i) * 1%;
+       
+        max-width:  100/($grid-cols/$i) * 1%;
+      }
+      .col#{$modifier}-offset-#{$i} {
+        margin-left:  100/($grid-cols/$i) * 1%;
+        
+      }
+    }
+  }
+}
+
+
+
+@each $modifier, $breakpoint in $map-grid-props {
+  // @if ($modifier == "") {
+  //   $modifier: "-xs";
+  // }
+  @include create-mq($breakpoint - 1, "max") {
+    .hidden#{$modifier}-down {
+      display: none !important;
+    }
+  }
+  @include create-mq($breakpoint, "min") {
+    .hidden#{$modifier}-up {
+      display: none !important;
+    }
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  @include sm {
+    max-width: $grid__bp-sm * 1px;
+  }
+  @include md {
+    max-width: $grid__bp-md * 1px;
+  }
+  @include lg {
+    max-width: $grid__bp-lg * 1px;
+  }
+  @include xl {
+    max-width: $grid__bp-xl * 1px;
+  }
+  @include xxl {
+    max-width: $grid__bp-xxl * 1px;
+  }
+  &-fluid {
+    margin: 0;
+    max-width: 100%;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    // Cols12
+    @each $modifier, $breakpoint in $map-grid-props {
+      @include create-col-classes($modifier, $grid__cols, $breakpoint);
+    }
+
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  // Cols12
+  @each $modifier, $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+}
+
+
