@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     return (
-        <div className="Sidebar pt-10  pl-4 pl-md-5 pl-lg-6 pl-xl-11">
+        <div className="Sidebar pt-10 pb-3 pl-4 pl-md-5 pl-lg-6 pl-xl-11">
             <div className="content">
                 {/* Category */}
                 <div>

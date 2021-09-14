@@ -1,3 +1,95 @@
+$navigationHeight: 10vh;
+
 .Catalog {
-    
+    height: 100vh;
+    position: relative;
+    padding-bottom: $navigationHeight;
+
+    .container {
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .order-control {
+        font: normal normal normal 15px/20px Avenir;
+        letter-spacing: 0px;
+        color: #5738ff;
+        cursor: pointer;
+        position: relative;
+        text-align: right;
+        transform: translateY(-100%);
+    }
+
+    .navigation {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        background-color: #fff;
+        width: 100%;
+        height: $navigationHeight;
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #0000001a;
+            height: 100%;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            &:active {
+                animation: buttonAnimation 0.3s ease-out;
+            }
+        }
+
+        .prevButton {
+            font: normal normal normal 15px/20px Avenir;
+            color: #00000080;
+        }
+        .nextButton {
+            font: normal normal normal 15px/20px Avenir;
+            letter-spacing: 0px;
+            color: #5738ff;
+        }
+        .numberBox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            span {
+                width: 36px;
+                height: 36px;
+                // background: #5738ff 0% 0% no-repeat padding-box;
+                // border: 2px solid #5738ff;
+                // border-radius: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #333;
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+            }
+            .active {
+                background: #5738ff 0% 0% no-repeat padding-box;
+                border: 2px solid #5738ff;
+                border-radius: 50%;
+                color: #fff;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+
+    @keyframes buttonAnimation {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.2);
+        }
+    }
 }
